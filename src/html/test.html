@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>donts</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
+</head>
+
+<body>
+    <div class="load">
+    </div>
+    <div class="load1"></div>
+    <div class="box">
+        <div id="sand_1" class="sand sand-water">sand_1</div>
+        <div id="sand_2" class="sand">sand_2</div>
+        <div id="sand_3" class="sand">sand_3</div>
+        <div id="sand_4" class="sand">sand_4</div>
+        <div id="sand_5" class="sand">sand_5</div>
+        <div id="sand_6" class="sand">sand_6</div>
+        <div id="sand_7" class="sand">sand_7</div>
+        <div id="sand_8" class="sand">sand_8</div>
+        <div id="sand_9" class="sand">sand_9</div>
+        <div id="sand_10" class="sand">sand_10></div>
+        <div id="sand_11" class="sand">sand_11></div>
+        <div id="sand_12" class="sand">sand_12></div>
+        <div id="sand_13" class="sand">sand_13></div>
+        <div id="sand_14" class="sand">sand_14></div>
+        <div id="sand_15" class="sand">sand_15></div>
+        <div id="sand_16" class="sand">sand_16></div>
+    </div>
+    <div class="cirk" id="cirk"></div>
+    <script src="assets/scripts/script.js"></script>
+    <script type="text/javascript">
+    var circle = new ProgressBar.Circle('#cirk', {
+
+        color: '#d7d2d6',
+        fill: 'rgb(255,255,255)',
+        strokeWidth: 10,
+        trailWidth: 1,
+        duration: 1500,
+        text: {
+            value: '0'
+        },
+        step: function(state, bar) {
+            bar.setText((bar.value() * 100).toFixed(0));
+        }
+    });
+    circle.animate(1, function() {
+        circle.animate(0.7)
+    });
+
+
+
+    var sand = [];
+    var n = 16;
+    var x = 4;
+    var sandproto = {
+
+    };
+
+    function sandfu(id, i) {
+        this.id = id;
+        this.id_int = i;
+        this.con_sand = [];
+    }
+    sandfu.prototype = sandproto;
+
+    var row = n / x;
+    for (var i = 1; i < n + 1; i++) {
+        var nameid = "sand_" + i;
+        var new_sand = new sandfu(nameid, i);
+        sand.push(new_sand);
+        console.log(sand[i - 1].id);
+
+    };
+    var kray = row;
+    for (var i = 0; i < sand.length; i++) {
+
+
+
+        var con_id = sand[i].id_int - row;
+        console.log("id int= " + sand[i].id_int + " sand[i].id_int - row  " + con_id);
+
+        if (con_id > 0) {
+            sand[i].con_sand.push(con_id);
+            console.log(con_id);
+
+        }
+        con_id = sand[i].id_int + row;
+
+
+        if (con_id <= n) {
+            sand[i].con_sand.push(con_id);
+            console.log(con_id);
+
+
+
+        }
+        con_id = sand[i].id_int;
+       
+            if ((con_id - 1) > 0) {
+                if( (cod_id-1) !== (kray-row) ){
+                    sand[i].con_sand.push(con_id - 1);
+                    console.log(con_id - 1);}
+                }
+
+            
+        
+
+        if ((con_id + 1) <= n) {
+            if ((cod_id + 1) !==( kray+1)) {
+                sand[i].con_sand.push(con_id + 1);
+                console.log(con_id + 1);
+            }
+        }
+
+
+
+        if (i + 1 == kray) {
+            kray = kray + row;
+        }
+    };
+
+
+    console.log(sand);
+    </script>
+</body>
+
+</html>

@@ -8061,13 +8061,20 @@ body {
     font-weight: normal;
     font-size: 13px;
     color: #000; }
+  .contact .response_contact {
+    text-align: -webkit-center;
+    color: #000;
+    font-family: "BIG JOHN";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    text-transform: uppercase; }
 
-.btn_contact {
-  margin-left: 64px; }
-  .btn_contact .btn_line__line {
-    left: 10px; }
-  .btn_contact .btn_line__btn {
-    background: #fad663; }
+.btn_contact .btn_line__line {
+  left: 10px; }
+
+.btn_contact .btn_line__btn {
+  background: #fad663; }
 
 .footer_site {
   padding-top: 60px;
@@ -8102,3 +8109,65 @@ body {
     background: #000; }
     .footer_site .footer_site__menu .active a {
       color: #d2eae3; }
+
+.load {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-left: 10px #000 solid;
+  border-right: 10px #5da solid;
+  border-top: 10px solid red;
+  border-bottom: 10px solid blue;
+  animation-name: spin;
+  animation-duration: 16000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+.load1 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  visibility: hidden;
+  animation-name: new2;
+  animation-duration: 16000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  visibility: hidden; }
+
+@keyframes new2 {
+  0% {
+    visibility: hidden;
+    animation-timing-function: ease-in; }
+  80% {
+    visibility: visible;
+    animation-timing-function: ease-in; } }
+
+@keyframes spin {
+  0% {
+    visibility: visible;
+    transform: rotate(0deg);
+    from { }
+    to {
+      transform: rotate(360deg); } }
+  70% {
+    transform: rotate(360deg);
+    from { }
+    to {
+      transform: rotate(0deg); } }
+  80% {
+    visibility: hidden; } }
+
+.box {
+  width: 400px;
+  height: 400px; }
+  .box .sand {
+    background: #fcdd76;
+    width: 100px;
+    height: 100px;
+    display: inline-block; }
+  .box .sand-water {
+    background: #756144; }
+
+.cirk {
+  width: 100px;
+  height: 100px; }

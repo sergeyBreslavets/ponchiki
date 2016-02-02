@@ -1,0 +1,7 @@
+{
+"work" : [ {"img": "assets/images/my_work/1.jpg", "alt" : "work1"},
+            {"img": "assets/images/my_work/2.jpg", "alt" : "work2"},
+            {"img": "assets/images/my_work/4.jpg", "alt" : "work4"},
+            {"img": "assets/images/my_work/3.jpg", "alt" : "work3"},
+            {"img": "assets/images/my_work/1.jpg", "alt" : "work1"} ]
+}

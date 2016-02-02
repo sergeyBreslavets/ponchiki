@@ -35,7 +35,9 @@ var sourcesjs      =  [
                             'bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
                             'bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
                             
-                            'bower_components/waterwheelcarousel/js/jquery.waterwheelCarousel.js',
+                            // 'bower_components/waterwheelcarousel/js/jquery.waterwheelCarousel.js',
+                            'bower_components/jqBootstrapValidation/dist/jqBootstrapValidation-1.3.7.js',
+                            'bower_components/progressbar.js/dist/progressbar.js',
 
                            './src/scripts/*.js'
 
